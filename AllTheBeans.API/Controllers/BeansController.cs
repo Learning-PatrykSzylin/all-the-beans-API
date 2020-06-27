@@ -47,6 +47,13 @@ namespace AllTheBeans.API.Controllers
             return NoContent();
         }
 
+        [HttpDelete]
+        public async Task<ActionResult> DeleteAllBeans()
+        {
+            await _beanRepo.DeleteAllBeans();
+
+            return NoContent();
+        }
 
     }
 }

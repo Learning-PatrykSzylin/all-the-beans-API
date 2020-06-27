@@ -12,5 +12,6 @@ namespace AllTheBeans.Core.Interfaces
         Task<List<Bean>> GetAllBeans();
         void AddBean(BeanCreateDTO bean);
         Task<BeanDTO> GetBeanById(int id);
+        Task DeleteAllBeans();
     }
 }

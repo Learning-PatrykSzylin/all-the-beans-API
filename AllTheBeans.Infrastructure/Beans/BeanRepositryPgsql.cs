@@ -117,5 +117,23 @@ namespace AllTheBeans.Infrastructure.Beans
 
             return beans;
         }
+
+        public async Task DeleteAllBeans()
+        {
+            try
+            {
+                using (var cmd = new NpgsqlCommand($"DELETE from beans", _sqlConnection))
+                {
+                    await cmd.ExecuteNonQueryAsync();
+                    cmd.Dispose();
+                    _sqlConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Post errors to a logging service
+                Console.WriteLine(ex.InnerException);
+            }
+        }
     }
 }
