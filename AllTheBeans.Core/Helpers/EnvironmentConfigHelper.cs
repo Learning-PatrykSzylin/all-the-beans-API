@@ -4,7 +4,6 @@ using System.Text;
 
 namespace AllTheBeans.Core.Helpers
 {
-    // 
     public static class EnvironmentConfigHelper
     {
         public static string GetDbConnectionString()
