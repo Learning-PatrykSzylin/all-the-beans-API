@@ -76,7 +76,7 @@ namespace AllTheBeans.API
             app.UseSwaggerUI(s =>
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Beans of the Day API");
-                s.RoutePrefix = string.Empty; // This will result in accessing swagger docs at the root of the url "/"
+                s.RoutePrefix = string.Empty; // This will result in accessing swagger docs at the root of the url -> "/"
             });
 
 
