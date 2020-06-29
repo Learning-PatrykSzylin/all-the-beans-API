@@ -20,8 +20,10 @@ namespace AllTheBeans.API
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>()
-                    .UseKestrel().UseUrls();
+                    string port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+                    string url = String.Concat("http://*:", port);
+
+                    webBuilder.UseStartup<Startup>().UseKestrel().UseUrls(url);
                 }); 
     }
 }
