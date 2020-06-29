@@ -21,7 +21,7 @@ namespace AllTheBeans.API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>()
-                    .UseKestrel();
+                    .UseKestrel().UseUrls();
                 }); 
     }
 }
