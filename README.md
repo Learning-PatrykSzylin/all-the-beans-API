@@ -11,7 +11,10 @@ For development, make sure you have .NET Core 3.1 installed. It can be installed
 3. Run it pressing CTRL + F5
 
 ## Endpoints
+### Swagger Doc
+Swagger docs are available at the root of the application ```/```.
+
 * ```Beans``` available on /api/beans
 * ```Bean adverts``` on /api/beanadvert
 
-Check controllers for reference please.
+Check controllers for reference as well as ```Swagger``` docs
